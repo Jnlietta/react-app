@@ -9,6 +9,13 @@ export const getFilteredCards = ({cards, searchString}, columnId) => cards
 
 export const getAllColumns = (state) => state.columns;
 
+// action creators
+export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
+
+export const addCard = payload => ({ type: 'ADD_CARD', payload });
+
+export const updateSearchString = payload => ({ type: 'UPDATE_SEARCHSTRING', payload});
+
 const reducer = (state, action) => {
   switch(action.type) {
     case 'ADD_COLUMN':
