@@ -1,0 +1,33 @@
+@import '../../styles/settings.scss';
+
+.navbar {
+    background-color: darken($color-dark, 3%);    
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        color: $color-light;
+        text-decoration: none;
+    }
+
+    .icon {
+        font-size: 24px;
+    }
+
+    &__list {
+        display:flex;
+        gap:10px;
+        list-style-type: none;
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
