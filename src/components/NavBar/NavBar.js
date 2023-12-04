@@ -9,7 +9,7 @@ const NavBar = () => {
                     <a href="/" className={styles.icon}>
                         <i className="fa fa-tasks"></i>
                     </a>
-                    <ul className={styles.navbar__list}>
+                    <ul className={styles.list}>
                         <li>
                             <a href="/">home</a>
                         </li>
