@@ -12,6 +12,10 @@
     a {
         color: $color-light;
         text-decoration: none;
+
+        &.linkActive {
+            color: $color-warning;
+        }
     }
 
     .icon {
@@ -27,9 +31,6 @@
     }
 }
 
-.linkActive {
-    color: $color-warning;
-}
 
 
 
