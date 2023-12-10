@@ -3,10 +3,14 @@ import PageTitle from '../PageTitle/PageTitle';
 import { useSelector } from 'react-redux';
 import { getFavoriteCards } from '../../redux/store';
 import Card from '../Card/Card';
+import { Navigate } from 'react-router-dom';
 
 const Favorite = () => {
 
     const cards = useSelector(state => getFavoriteCards(state));
+    console.log('fav cards:',cards);
+
+    if(cards.length === 0) return <PageTitle>No cards...</PageTitle>
 
     return(
         <div className={styles.hero}>
