@@ -3,7 +3,7 @@ import Column from '../Column/Column.js';
 import ColumnForm from '../ColumnForm/ColumnForm.js';
 import { useSelector } from 'react-redux';
 import { getColumnsByList, getListById } from '../../redux/store.js';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import SearchForm from '../SearchForm/SearchForm.js';
 
 
@@ -13,6 +13,8 @@ const List = () => {
 
     const listData = useSelector(state => getListById(state, listId));
     const columns = useSelector(state => getColumnsByList(state, listId));
+
+    if(!listData) return <Navigate to="/" />
 
     return (
         <div className={styles.list}>
