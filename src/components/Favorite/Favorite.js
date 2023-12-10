@@ -3,7 +3,6 @@ import PageTitle from '../PageTitle/PageTitle';
 import { useSelector } from 'react-redux';
 import { getFavoriteCards } from '../../redux/store';
 import Card from '../Card/Card';
-import { Navigate } from 'react-router-dom';
 
 const Favorite = () => {
 
