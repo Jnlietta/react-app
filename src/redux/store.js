@@ -17,6 +17,9 @@ export const getAllLists = (state) => state.lists;
 
 export const getSearchString = (state) => state.searchString;
 
+export const getFavoriteCards = ({cards}) => cards
+  .filter(card => card.isFavorite === true);
+
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 
